@@ -234,7 +234,7 @@ function draw() {
     //ambulance.visible = false;
     
     if (mousePressedOver(readMe)) {
-      if (touches.length > 0 || keyDown("space")) {
+      if (touches.length > 0) {
       readMe.visible = false;
       gameState = PLAY;
       touches =[]
