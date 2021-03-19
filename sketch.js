@@ -235,7 +235,7 @@ function draw() {
   /*updated code*/  
     if (mousePressedOver(readMe)) {
       //updated code
-      if (touches.length > 0 ) {
+      if (touches.length > 0 || keyDown("space")) {
       readMe.visible = false;
       gameState = PLAY;
       touches =[]
@@ -252,7 +252,7 @@ function draw() {
   //Resumes game when paused
   
     if(mousePressedOver(playButton)){
-      if (touches.length > 0 ){
+      if (touches.length > 0 || keyDown("space")){
         pauseButton.visible = true;
         playButton.visible = false;
         gameState = PLAY;
