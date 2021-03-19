@@ -258,7 +258,7 @@ function draw() {
         gameState = PLAY;
         touches=[];
       }
-    }
+    
    
   }
   //Game state play
