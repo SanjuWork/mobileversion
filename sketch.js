@@ -232,9 +232,10 @@ function draw() {
     blueV.setVelocityEach(0, 0);
     yellowV.setVelocityEach(0, 0);
     //ambulance.visible = false;
-    
+  /*updated code*/  
     if (mousePressedOver(readMe)) {
-      if (touches.length > 0) {
+      //updated code
+      if (touches.length > 0 ) {
       readMe.visible = false;
       gameState = PLAY;
       touches =[]
@@ -249,11 +250,16 @@ function draw() {
   }*/
 
   //Resumes game when paused
-  if (touches.length > 0 || mousePressedOver(playButton)) {
-    pauseButton.visible = true;
-    playButton.visible = false;
-    gameState = PLAY;
-    touches=[];
+  
+    if(mousePressedOver(playButton)){
+      if (touches.length > 0 ){
+        pauseButton.visible = true;
+        playButton.visible = false;
+        gameState = PLAY;
+        touches=[];
+      }
+    }
+   
   }
   //Game state play
   if (gameState === PLAY) {
